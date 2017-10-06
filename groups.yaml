@@ -1,0 +1,15 @@
+weather:
+  name: Weather
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_precip_probability
+
+internet:
+  name: Internet
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping

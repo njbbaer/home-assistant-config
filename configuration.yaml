@@ -1,0 +1,53 @@
+homeassistant:
+  name: Irvine Home
+  latitude: !secret home_lat
+  longitude: !secret home_long
+  elevation: 45
+  unit_system: imperial
+  time_zone: America/Los_Angeles
+  customize: !include customize.yaml
+
+frontend:
+
+config:
+
+http:
+  api_password: !secret api_password
+  # base_url: example.duckdns.org:8123
+
+updater:
+  include_used_components: true
+
+discovery:
+
+conversation:
+
+history:
+
+logbook:
+
+sun:
+
+tts:
+  - platform: google
+
+sensor:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    monitored_conditions:
+      - temperature
+      - cloud_cover
+      - precip_probability
+      - summary
+  - platform: speedtest
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+
+device_tracker:
+  - platform: bluetooth_tracker
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

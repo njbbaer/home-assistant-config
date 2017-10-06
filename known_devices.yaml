@@ -1,0 +1,14 @@
+
+nate:
+  name: Nate
+  hide_if_away: false
+  mac: BT_00:9A:CD:E3:1A:3E
+  picture: https://s.gravatar.com/avatar/bd5669e7e0d1fe4287f8d9ed47d92cad
+  track: true
+
+jess:
+  name: Jess
+  hide_if_away: false
+  mac: BT_AC:37:43:8F:C8:26
+  picture: https://goo.gl/So22fh
+  track: true
