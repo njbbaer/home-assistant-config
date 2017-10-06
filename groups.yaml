@@ -13,3 +13,9 @@ internet:
     - sensor.speedtest_download
     - sensor.speedtest_upload
     - sensor.speedtest_ping
+
+multisensor:
+  name: Multisensor
+  entities:
+    - sensor.multisensor_temperature
+    - sensor.multisensor_humidity

@@ -13,7 +13,6 @@ config:
 
 http:
   api_password: !secret api_password
-  # base_url: example.duckdns.org:8123
 
 updater:
   include_used_components: true
@@ -44,6 +43,16 @@ sensor:
       - ping
       - download
       - upload
+  - platform: mqtt
+    state_topic: 'home/multisensor'
+    name: 'Multisensor Temperature'
+    unit_of_measurement: '°C'
+    value_template: '{{ value_json.temperature }}'
+  - platform: mqtt
+    state_topic: 'home/multisensor'
+    name: 'Multisensor Humidity'
+    unit_of_measurement: '%'
+    value_template: '{{ value_json.humidity }}'
 
 device_tracker:
   - platform: bluetooth_tracker
