@@ -44,18 +44,21 @@ sensor:
       - download
       - upload
   - platform: mqtt
-    state_topic: 'home/multisensor'
+    state_topic: 'njbbaer/multisensor'
     name: 'Multisensor Temperature'
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature }}'
   - platform: mqtt
-    state_topic: 'home/multisensor'
+    state_topic: 'njbbaer/multisensor'
     name: 'Multisensor Humidity'
     unit_of_measurement: '%'
     value_template: '{{ value_json.humidity }}'
 
 device_tracker:
   - platform: bluetooth_tracker
+
+mqtt:
+  broker: test.mosquitto.org
 
 group: !include groups.yaml
 automation: !include automations.yaml
