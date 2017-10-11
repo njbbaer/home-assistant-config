@@ -54,8 +54,8 @@ sensor:
     unit_of_measurement: '%'
     value_template: '{{ value_json.humidity }}'
 
-device_tracker:
-  - platform: bluetooth_tracker
+# device_tracker:
+#   - platform: bluetooth_tracker
 
 mqtt:
   broker: test.mosquitto.org
