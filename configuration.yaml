@@ -38,11 +38,6 @@ sensor:
       - cloud_cover
       - precip_probability
       - summary
-  - platform: speedtest
-    monitored_conditions:
-      - ping
-      - download
-      - upload
   - platform: mqtt
     state_topic: 'njbbaer/multisensor'
     name: 'Multisensor Temperature'
